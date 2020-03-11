@@ -1,11 +1,13 @@
 import datetime
 import numpy as np
 
-intro = """A simple solver that uses backtracking to solve a NumPy generated board. By Philip Prescott-Decie \xa92019.\n
- _____ _____ _____ _____    _____ _____ ____  _____ _____ _____ 
+intro = """Sudoku solver, it uses backtracking to solve a NumPy generated board.
+By Philip Prescott-Decie \xa92019.\n
+ _____ _____ _____ _____    _____ _____ ____  _____ _____ _____
 |  _  |  |  |_   _|     |  |   __|  |  |    \|     |  |  |  |  |
 |     |  |  | | | |  |  |  |__   |  |  |  |  |  |  |    -|  |  |
-|__|__|_____| |_| |_____|  |_____|_____|____/|_____|__|__|_____| in == 100 lines ;)\n"""
+|__|__|_____| |_| |_____|  |_____|_____|____/|_____|__|__|_____|
+in == 100 lines ;)\n"""
 print(intro)
 
 
@@ -22,8 +24,7 @@ def generate_sudoku(mask_rate=0.5):  # generates a new sudoku
                     row_rest = np.setdiff1d(rg, m[r, :c])
                     avb1 = np.intersect1d(col_rest, row_rest)
                     sub_r, sub_c = r // 3, c // 3
-                    avb2 = np.setdiff1d(np.arange(0, n + 1),
-                                        m[sub_r * 3:(sub_r + 1) * 3, sub_c * 3:(sub_c + 1) * 3].ravel())
+                    avb2 = np.setdiff1d(np.arange(0, n + 1), m[sub_r * 3:(sub_r + 1) * 3, sub_c * 3:(sub_c + 1) * 3].ravel())
                     avb = np.intersect1d(avb1, avb2)
                     m[r, c] = np.random.choice(avb, size=1)
             break
@@ -73,8 +74,7 @@ def print_board(bo):  # print the board
                 print(" | ", end="")
             if j == 8:
                 print(bo[i][j])
-            else:
-                print(str(bo[i][j]) + " ", end="")
+            else: print(str(bo[i][j]) + " ", end="")
 
 
 def find_empty(bo):  # loop through board, find first empty element
