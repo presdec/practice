@@ -1,15 +1,12 @@
-# url : https://www.hackerrank.com/challenges/a-very-big-sum/problem?h_r=profile
-#!/bin/python3
+# url : https://www.hackerrank.com/challenges/a-very-big-sum/problem
 
-import math
 import os
-import random
-import re
-import sys
+
 
 # Complete the aVeryBigSum function below.
 def aVeryBigSum(ar):
     return sum(ar)
+
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
