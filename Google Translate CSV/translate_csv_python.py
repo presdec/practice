@@ -31,10 +31,10 @@ def importCSV():
     # Translated word one by one from the CSV file and save them to the dictionary
     for index, row in data.iterrows():
         count += 1
-        print(str(count) + row["imgalt"])  # Check to see that the program is running
+        print(str(count) + row["imgalt"])  # Check to see it is running
         translatedCSV["imgalt"].append(translator.translate(str(row["imgalt"]), dest='en'))
         translatedCSV["title"].append(translator.translate(row["title"]))
-        print(translatedCSV["title"])
+        print(translatedCSV["title"])  # Check to see it is translating
         translatedCSV["desciption"].append(translator.translate(row["desciption"]))
         translatedCSV["difficulty"].append(translator.translate(row["difficulty"]))
         translatedCSV["categories"].append(translator.translate(row["categories"]))
