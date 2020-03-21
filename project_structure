@@ -1,0 +1,115 @@
+
+├──File Sorter
+|   ├──README.md
+|   ├──Sorter.log
+|   └──filesorter.py
+├──First Steps
+|   ├──exercises.py
+|   └──requirements.txt
+├──Google Translate CSV
+|   └──translate_csv_python.py
+├──HackerRank_solutions
+|   ├──Interview Preparation Kit
+|   |   ├──Repeated String
+|   |   |   └──solution.py
+|   |   ├──Warm-up Challenges
+|   |   |   ├──Counting Valleys
+|   |   |   |   └──solution.py
+|   |   |   ├──Jumping on the Clouds
+|   |   |   |   └──solution.py
+|   |   |   ├──Sock Merchant
+|   |   |   |   └──solution.py
+|   ├──Problem Solving
+|   |   ├──A Very Big Sum
+|   |   |   └──solution.py
+|   |   ├──Apple and Orange
+|   |   |   └──solution.py
+|   |   ├──Birthday Cake Candles
+|   |   |   └──solution.py
+|   |   ├──Birthday Chocolate
+|   |   |   └──solution.py
+|   |   ├──Bon Appetite
+|   |   |   └──solution.py
+|   |   ├──Breaking The Records
+|   |   |   └──solution.py
+|   |   ├──Compare the triplets
+|   |   |   └──solution.py
+|   |   ├──Day of the Programmer
+|   |   |   └──solution.py
+|   |   ├──Diagonal Difference
+|   |   |   └──solution.py
+|   |   ├──Divisible Sum Pairs
+|   |   |   └──solution.py
+|   |   ├──Grading
+|   |   |   └──solution.py
+|   |   ├──Kangaroo
+|   |   |   └──solution.py
+|   |   ├──Migratory Birds
+|   |   |   └──solution.py
+|   |   ├──Mini Max Sum
+|   |   |   └──solution.py
+|   |   ├──Plus Minus
+|   |   |   └──solution.py
+|   |   ├──Simple Array Sum
+|   |   |   └──solution.py
+|   |   ├──Solve Me First
+|   |   |   └──solution.py
+|   |   ├──Staircase
+|   |   |   └──solution.py
+|   |   ├──Time Conversion
+|   |   |   └──solution.py
+|   |   └──solution.py
+|   ├──Python
+|   |   ├──Arithmetic Operators
+|   |   |   └──solution.py
+|   |   ├──Calendar Module
+|   |   |   └──solution.py
+|   |   ├──Division
+|   |   |   └──solution.py
+|   |   ├──Find Angle MBC
+|   |   |   └──solution.py
+|   |   ├──Find the Runner-Up Score
+|   |   |   └──solution.py
+|   |   ├──Finding the percentage
+|   |   |   └──solution.py
+|   |   ├──Integers Come In All Sizes
+|   |   |   └──solution.py
+|   |   ├──List Comprehensions
+|   |   |   └──solution.py
+|   |   ├──Lists
+|   |   |   └──solution.py
+|   |   ├──Loops
+|   |   |   └──solution.py
+|   |   ├──Mod-Divmod
+|   |   |   └──solution.py
+|   |   ├──Nested List
+|   |   |   └──solution.py
+|   |   ├──Power - Mod Power
+|   |   |   └──solution.py
+|   |   ├──Print Function
+|   |   |   └──solution.py
+|   |   ├──Python If-Else
+|   |   |   └──solution.py
+|   |   ├──String Split and Join
+|   |   |   └──solution.py
+|   |   ├──Triangle Quest
+|   |   |   └──solution.py
+|   |   ├──Triangle Quest 2
+|   |   |   └──solution.py
+|   |   ├──Tuples
+|   |   |   └──solution.py
+|   |   ├──Validating Email Addresses
+|   |   |   └──solution.py
+|   |   ├──Word Order
+|   |   |   └──solution.py
+|   |   ├──Write a Function
+|   |   |   └──solution.py
+|   |   ├──XML2 - Find the Maximum Depth
+|   |   |   └──solution.py
+|   |   ├──itertools-product
+|   |   |   └──solution.py
+|   └──README.md
+├──Sudoku
+|   ├──README.md
+|   └──sudoku.py
+└──README.md
