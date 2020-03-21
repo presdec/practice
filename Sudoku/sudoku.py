@@ -1,3 +1,9 @@
+# @author : Philip Prescott-Decie
+# @version : 1.0.0
+# @date : 21-03-2020
+# @email : presdec@gmail.com
+# Tested and working on Ubuntu 18.04 with Python 3.7
+
 import datetime
 import numpy as np
 
