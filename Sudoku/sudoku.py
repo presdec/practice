@@ -7,7 +7,7 @@
 import datetime
 import numpy as np
 
-intro = """Sudoku solver, it uses backtracking to solve a NumPy generated board.
+intro = """\nSudoku solver, it uses backtracking to solve a NumPy generated board.
 By Philip Prescott-Decie \xa92019.\n
  _____ _____ _____ _____    _____ _____ ____  _____ _____ _____
 |  _  |  |  |_   _|     |  |   __|  |  |    \|     |  |  |  |  |
