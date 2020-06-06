@@ -8,7 +8,6 @@ from easygui import choicebox, textbox, fileopenbox
 from docx import Document
 import os
 
-
 """
 Module that provides a destination language choice. Further languages can be
 added from the following list under choices:
