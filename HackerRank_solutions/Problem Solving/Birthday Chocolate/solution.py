@@ -1,33 +1,29 @@
 # https://www.hackerrank.com/challenges/the-birthday-bar/problem
 
 
-#!/bin/python3
+# !/bin/python3
 
-import math
 import os
-import random
-import re
-import sys
 
 
 # Complete the birthday function below.
 def birthday(s, d, m):
-    ans=0
+    ans = 0
     for i in range(len(s)):
-        n=0
-        count=0
-        while(n<(m)):
-            count+=s[i+n]
-            n+=1
-        if(count==d):
-            ans+=1
-        if(i+n==len(s)):
+        n = 0
+        count = 0
+        while n < (m):
+            count += s[i + n]
+            n += 1
+        if count == d:
+            ans += 1
+        if i + n == len(s):
             break
     return ans
 
 
-if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+if __name__ == "__main__":
+    fptr = open(os.environ["OUTPUT_PATH"], "w")
 
     n = int(input().strip())
 
@@ -41,6 +37,6 @@ if __name__ == '__main__':
 
     result = birthday(s, d, m)
 
-    fptr.write(str(result) + '\n')
+    fptr.write(str(result) + "\n")
 
     fptr.close()

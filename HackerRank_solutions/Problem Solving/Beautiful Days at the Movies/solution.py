@@ -1,13 +1,9 @@
 # https://www.hackerrank.com/challenges/beautiful-days-at-the-movies/problem
 
 
-#!/bin/python3
+# !/bin/python3
 
-import math
 import os
-import random
-import re
-import sys
 
 
 def reverse_integer(x):
@@ -24,9 +20,9 @@ def reverse_integer(x):
 # Complete the beautifulDays function below.
 def beautifulDays(i, j, k):
     count = 0
-    for l in range(i,j):
-        print(reverse_integer(l))
-        if (l-reverse_integer(l)) % k == 0:
+    for lo in range(i, j):
+        print(reverse_integer(lo))
+        if (lo-reverse_integer(lo)) % k == 0:
             count += 1
     if count == 32:
         return count + 1

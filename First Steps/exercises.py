@@ -182,7 +182,6 @@ time.sleep(0.6)
 print(
     '\nYou are driving a little too fast, and a police officer stops you. Write a function\nto return one of 3 possible results: "No ticket", "Small ticket", or "Big Ticket". \nIf your speed is 60 or less, the result is "No Ticket". If speed is between 61 \nand 80 inclusive, the result is "Small Ticket". If speed is 81 or more, the result \nis "Big Ticket". Unless it is your birthday (encoded as a boolean value in the \nparameters of the function) -- on your birthday, your speed can be 5 higher in all \ncases.\n')
 
-
 def ticket(speed, is_bday):
     if is_bday:
         speeding = speed - 5
