@@ -15,9 +15,11 @@ added from the following list under choices:
 https://py-googletrans.readthedocs.io/en/latest/#googletrans-languages
 """
 
-source_lang = 'en'
+source_lang = "en"
 choices = ["fr", "el"]
-desti_lang = choicebox("What is the Destination Language?", "translator", choices=choices)
+desti_lang = choicebox(
+    "What is the Destination Language?", "translator", choices=choices
+)
 
 
 """
@@ -25,9 +27,9 @@ Module that extracts text from MS XML Word document (.docx).
 (Inspired by python-docx <https://github.com/mikemaccana/python-docx>)
 """
 
-WORD_NAMESPACE = '{http://schemas.openxmlformats.org/wordprocessingml/2006/main}'
-PARA = WORD_NAMESPACE + 'p'
-TEXT = WORD_NAMESPACE + 't'
+WORD_NAMESPACE = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
+PARA = WORD_NAMESPACE + "p"
+TEXT = WORD_NAMESPACE + "t"
 
 
 def get_docx_text(filename):
@@ -35,19 +37,17 @@ def get_docx_text(filename):
     Take the path of a docx file as argument, return the text in unicode.
     """
     document = zipfile.ZipFile(filename)
-    xml_content = document.read('word/document.xml')
+    xml_content = document.read("word/document.xml")
     document.close()
     tree = XML(xml_content)
 
     paragraphs = []
     for paragraph in tree.getiterator(PARA):
-        texts = [node.text
-                 for node in paragraph.getiterator(TEXT)
-                 if node.text]
+        texts = [node.text for node in paragraph.getiterator(TEXT) if node.text]
         if texts:
-            paragraphs.append(''.join(texts))
+            paragraphs.append("".join(texts))
 
-    return '\n\n'.join(paragraphs)
+    return "\n\n".join(paragraphs)
 
 
 def splitIntoSentences(text):
@@ -80,8 +80,15 @@ def main(filename, source_lang, desti_lang):
             elif sentence != "" and not None:
                 print(str(count) + ":" + str(sentence))
                 translatedText = translate(sentence, source_lang, desti_lang)
-                message = "Original: \n" + str(sentence) + "\nGoogleTrans:\n" + str(translatedText)
-                fd_v = textbox(msg=str(message), title='translation', text=translatedText)
+                message = (
+                    "Original: \n"
+                    + str(sentence)
+                    + "\nGoogleTrans:\n"
+                    + str(translatedText)
+                )
+                fd_v = textbox(
+                    msg=str(message), title="translation", text=translatedText
+                )
                 tmp.append(fd_v)
         final.append(". ".join(tmp))
     final = "\n".join(final)
@@ -90,10 +97,10 @@ def main(filename, source_lang, desti_lang):
     print("please check translation.txt")
     f.close()
     document = Document()
-    document.add_heading('Translation', 0)
+    document.add_heading("Translation", 0)
     p = document.add_paragraph(final)
     document.add_page_break()
-    document.save('translated_' + os.path.basename(filename))
+    document.save("translated_" + os.path.basename(filename))
 
 
 if __name__ == "__main__":
