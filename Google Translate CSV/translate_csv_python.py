@@ -11,7 +11,7 @@ proxy = {
 
 translator = Translator(proxies=proxy)
 
-def
+
 # Translating the text to specified target language
 def translate(word):
     translation = translator.translate(word)
