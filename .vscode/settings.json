@@ -1,3 +1,6 @@
 {
-    "python.pythonPath": "/home/presdec/anaconda3/envs/flask/bin/python"
+    "python.pythonPath": "C:\\Users\\presdec\\anaconda3\\python.exe",
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true
 }
