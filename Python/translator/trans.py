@@ -3,10 +3,19 @@ try:
 except ImportError:
     from xml.etree.ElementTree import XML
 import zipfile
-from googletrans import Translator
+from deep_translator import (GoogleTranslator,
+                             PonsTranslator,
+                             LingueeTranslator,
+                             MyMemoryTranslator,
+                             YandexTranslator,
+                             DeepL,
+                             QCRI,
+                             single_detection,
+                             batch_detection)
 from easygui import choicebox, textbox, fileopenbox
 from docx import Document
 import os
+import pyperclip
 
 """
 Module that provides a destination language choice. Further languages can be
@@ -15,7 +24,7 @@ https://py-googletrans.readthedocs.io/en/latest/#googletrans-languages
 """
 
 source_lang = "en"
-choices = ["fr", "el"]
+choices = ["el"]
 desti_lang = choicebox(
     "What is the Destination Language?", "translator", choices=choices
 )
@@ -41,7 +50,7 @@ def get_docx_text(filename):
     tree = XML(xml_content)
 
     paragraphs = []
-    for paragraph in tree.getiterator(PARA):
+    for paragraph in tree.iter(PARA):
         texts = [node.text for node in paragraph.getiterator(TEXT) if node.text]
         if texts:
             paragraphs.append("".join(texts))
@@ -55,13 +64,28 @@ def splitIntoSentences(text):
 
 
 def translate(text, source, dest):
-    translator = Translator()
     if text is None:
         print("Invalid Text")
     elif text != "":
-        translation = translator.translate(text, src=source, dest=dest).text
+        translation = GoogleTranslator(source='en', target=desti_lang).translate(text=text)
+        pyperclip.copy(translation)
     return translation
 
+
+def translate2(text, source, dest):
+    if text is None:
+        print("Invalid Text")
+    elif text != "":
+        translation2 = MyMemoryTranslator(source='auto', target=desti_lang).translate(text)
+    return translation2
+
+
+def translate3(text, source, dest):
+    if text is None:
+        print("Invalid Text")
+    elif text != "":
+        translation3 = LingueeTranslator(source='auto', target=desti_lang).translate(text)
+    return translation3
 
 def main(filename, source_lang, desti_lang):
     print("Translating:  " + os.path.basename(filename))
@@ -79,6 +103,8 @@ def main(filename, source_lang, desti_lang):
             elif sentence != "" and not None:
                 print(str(count) + ":" + str(sentence))
                 translatedText = translate(sentence, source_lang, desti_lang)
+                #translatedText2 = translate2(sentence, source_lang, desti_lang)
+                #translatedText3 = translate2(sentence, source_lang, desti_lang)
                 message = (
                     "Original: \n"
                     + str(sentence)
